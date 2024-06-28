@@ -6,6 +6,14 @@ import { data } from "../data/data";
 
 export function getPlanetsWithLowGravity(data) {
   // Your code goes here...
+	let lowGravity = data.planets
+	.filter((planets) => {
+		return planets.gravity < 10;
+	})
+	.map((names) => {
+		return names.name;
+	})
+	return lowGravity;
 }
 
 
